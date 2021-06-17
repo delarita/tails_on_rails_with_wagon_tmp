@@ -4,12 +4,13 @@
 // that code so it'll be compiled.
 
 import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
+//import Turbolinks from "turbolinks"
+import * as Turbo from "@hotwired/turbo"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 Rails.start()
-Turbolinks.start()
+Turbo.start()
 ActiveStorage.start()
 
 
@@ -24,7 +25,8 @@ import "stylesheets/application"
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener('turbo:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  console.log('turbo!')
 });
